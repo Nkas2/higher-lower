@@ -4,6 +4,7 @@ app = Flask(__name__)
 n = random.randint(0, 9)
 
 
+
 @app.route('/')
 def index():
     return ("<h1>Guess a number between 0 and 9</h1> "
