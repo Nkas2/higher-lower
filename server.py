@@ -1,6 +1,7 @@
 from flask import Flask
 import random
 app = Flask(__name__)
+n = random.randint(0, 9)
 
 
 @app.route('/')
@@ -10,7 +11,6 @@ def index():
 
 @app.route("/<int:number>")
 def guess(number):
-    n = random.randint(1, 9)
     html = ""
     if number < n:
         html = ("<h1 style='color: red'>To low, try again!</h1>"
